@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <GridPane alignment="CENTER" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <children>
+                        <JFXButton fx:id="btnlive" layoutX="32.0" layoutY="35.0" stylesheets="@application.css" text="LIVE" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="117.0" AnchorPane.topAnchor="34.0" />
+                        <JFXButton fx:id="btndie" layoutX="117.0" layoutY="34.0" stylesheets="@application.css" text="DIE" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="117.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="34.0" />
+                     </children>
+                  </AnchorPane>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-37.0" layoutY="10.0" text="The Mandalorian App">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="7.0" layoutY="55.0" text="Who doesn't like this armour?" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+            </GridPane>
+         </center>
+         <bottom>
+            <AnchorPane fx:id="bottompic" prefHeight="100.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="BOTTOM_CENTER">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="226.0" layoutX="187.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="187.0" AnchorPane.rightAnchor="187.0" AnchorPane.topAnchor="0.0">
+                     <image>
+                        <Image url="@img/SW.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </bottom>
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File" />
+                <Menu mnemonicParsing="false" text="About" />
+                <Menu mnemonicParsing="false" text="Exit" />
+              </menus>
+            </MenuBar>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
