@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
@@ -14,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
    <children>
       <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <center>
@@ -32,34 +33,51 @@
                <children>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <children>
-                        <JFXButton fx:id="btnlive" layoutX="32.0" layoutY="35.0" stylesheets="@application.css" text="LIVE" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="117.0" AnchorPane.topAnchor="34.0" />
-                        <JFXButton fx:id="btndie" layoutX="117.0" layoutY="34.0" stylesheets="@application.css" text="DIE" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="117.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="34.0" />
+                        <JFXButton fx:id="btnRedSymbol" layoutX="61.0" layoutY="14.0" onAction="#showRedSymbol" prefHeight="25.0" prefWidth="81.0" stylesheets="@application.css" text="Red Symbol" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="61.0" AnchorPane.rightAnchor="58.0" AnchorPane.topAnchor="14.0" />
+                        <JFXButton fx:id="btnBlackSymbol" layoutX="56.0" layoutY="55.0" onAction="#showBlackSymbol" prefHeight="25.0" prefWidth="89.0" stylesheets="@application.css" text="Black Symbol" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="56.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="55.0" />
                      </children>
                   </AnchorPane>
                   <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
                      <children>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-37.0" layoutY="10.0" text="The Mandalorian App">
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-27.0" text="The Mandalorian App">
                                  <font>
                                     <Font size="30.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="7.0" layoutY="55.0" text="Who doesn't like this armour?" />
+                              <Label layoutX="51.0" layoutY="45.0" text="Who doesn't like this symbol?" />
                            </children>
                         </AnchorPane>
                      </children>
                   </VBox>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <ImageView fx:id="ivBlackSymbol" fitHeight="150.0" fitWidth="115.0" layoutX="85.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="85.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <image>
+                              <Image url="@img/blackMandalorian.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="ivRedSymbol" fitHeight="150.0" fitWidth="152.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="48.0" AnchorPane.topAnchor="0.0">
+                           <image>
+                              <Image url="@img/redMandalorian.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
                </children>
             </GridPane>
          </center>
          <bottom>
             <AnchorPane fx:id="bottompic" prefHeight="100.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="BOTTOM_CENTER">
                <children>
-                  <ImageView fitHeight="100.0" fitWidth="226.0" layoutX="187.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="187.0" AnchorPane.rightAnchor="187.0" AnchorPane.topAnchor="0.0">
+                  <ImageView fitHeight="100.0" fitWidth="226.0" layoutX="227.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="227.0" AnchorPane.rightAnchor="194.0" AnchorPane.topAnchor="0.0">
                      <image>
                         <Image url="@img/SW.png" />
                      </image>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
                   </ImageView>
                </children>
             </AnchorPane>
